@@ -22,8 +22,3 @@ This server's significance lies in its capability to generate estimated time and
 
 
 
-
-
-
-### RUN DOCKER Command
-sudo docker run -t -i -p 5000:5000 -v "${PWD}:/data" ghcr.io/project-osrm/osrm-backend osrm-routed --algorithm mld /data/colombia-latest.osrm
