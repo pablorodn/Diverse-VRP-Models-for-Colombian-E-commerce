@@ -105,7 +105,8 @@ docker run -t -v "${PWD}:/data" ghcr.io/project-osrm/osrm-backend osrm-extract -
 ```
 Partition the graph
 ```bash
-docker run -t -v "${PWD}:/data" ghcr.io/project-osrm/osrm-backend osrm-partition /data/colombia-latest.osm.osrm || echo "osrm-partition failed"
+docker run -t -v "${PWD}:/data" ghcr.io/project-osrm/osrm-backend osrm-partition /data/colombia-latest.osrm || echo "osrm-partition failed"
+
 ```
 Contract the graph
 ```bash
