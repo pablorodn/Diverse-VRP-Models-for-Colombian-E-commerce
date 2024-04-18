@@ -1,6 +1,6 @@
 ## Introduction
 
-This guide outlines the steps to set up an OSRM (Open Source Routing Machine) server tailored for Colombian logistics challenges. The process draws inspiration from a tutorial by [Afian Anwar](https://www.linkedin.com/in/afian-anwar/), Founder & CEO of [Afi Labs](https://www.afi.io/), which originally focused on creating a geocoding and reverse geocoding service using OpenStreetMap data. You can find the original tutorial [here](https://www.afi.io/blog/building-a-free-geocoding-and-reverse-geocoding-service-with-openstreetmap/). However, modifications have been made to adapt it for Colombian usage, along with adjustments specific to server configurations on Ubuntu.
+This guide outlines the steps to set up an OSRM (Open Source Routing Machine) server. The process draws inspiration from a tutorial by [Afian Anwar](https://www.linkedin.com/in/afian-anwar/), Founder & CEO of [Afi Labs](https://www.afi.io/), which originally focused on creating a geocoding and reverse geocoding service using OpenStreetMap data. You can find the original tutorial [here](https://www.afi.io/blog/building-a-free-geocoding-and-reverse-geocoding-service-with-openstreetmap/). However, modifications have been made to adapt it for Colombian usage, along with adjustments specific to server configurations on Ubuntu.
 
 ## Step 1: Creating the EC2 Server on AWS
 
