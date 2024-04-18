@@ -112,3 +112,6 @@ Contract the graph
 ```bash
 docker run -t -v "${PWD}:/data" ghcr.io/project-osrm/osrm-backend osrm-customize /data/colombia-latest.osrm || echo "osrm-customize failed"
 ```
+
+
+<img width="700" alt="image" src="https://github.com/pablorodn/Diverse-VRP-Models-for-Colombian-E-commerce/assets/113043356/62ad2ab5-fbed-4bc1-8baa-208203f4b61a">
