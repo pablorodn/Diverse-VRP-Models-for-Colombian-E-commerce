@@ -70,5 +70,13 @@ To verify that everything is functioning correctly, execute the following comman
 ```bash
 sudo docker run hello-world
 ```
+If you have successfully installed Docker, you should see the following output:
+
 <img width="700" alt="image" src="https://github.com/pablorodn/Diverse-VRP-Models-for-Colombian-E-commerce/assets/113043356/f9552384-90a5-46b6-8531-9cdab5b7e9cb">
+
+### Step 4: Installing osrm-backend and Running the OSRM API
+
+Now, we're ready to move forward with installing osrm-backend and launching the OSRM API. In this step, we'll guide you through the process, ensuring a smooth setup.
+
+
 
