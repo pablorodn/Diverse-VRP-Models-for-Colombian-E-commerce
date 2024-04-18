@@ -99,3 +99,15 @@ After downloading the data, you can proceed with the installation and configurat
 
 <img width="800" alt="image" src="https://github.com/pablorodn/Diverse-VRP-Models-for-Colombian-E-commerce/assets/113043356/29767487-c212-496e-81c5-204908375424">
 
+Spin up the osrm-backend image
+```bash
+docker run -t -v "${PWD}:/data" ghcr.io/project-osrm/osrm-backend osrm-extract -p /opt/car.lua /data/colombia-latest.osm.pbf || echo "osrm-extract failed"
+```
+Partition the graph
+```bash
+docker run -t -v "${PWD}:/data" ghcr.io/project-osrm/osrm-backend osrm-partition /data/colombia-latest.osm.osrm || echo "osrm-partition failed"
+```
+Contract the graph
+```bash
+docker run -t -v "${PWD}:/data" ghcr.io/project-osrm/osrm-backend osrm-customize /data/colombia-latest.osrm || echo "osrm-customize failed"
+```
