@@ -1,6 +1,6 @@
 # Diverse-VRP-Models-for-Colombian-E-commerce
 Repository dedicated to providing a variety of Vehicle Routing Problem (VRP) models tailored specifically to address the logistics challenges of e-commerce businesses in Colombia
-
+funciona
 # Diverse Last-Mile Delivery Solutions 
 
 This repository is dedicated to providing a variety of Vehicle Routing Problem (VRP) models tailored specifically to address the logistics challenges of last-mile deliveries for e-commerce businesses operating in Colombia. The Last-Mile Delivery Problem involves optimizing the routes of vehicles to efficiently serve customers located in dense urban areas, taking into account factors such as traffic congestion, road restrictions, and specific delivery time windows.
