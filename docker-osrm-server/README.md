@@ -27,8 +27,12 @@ After creating the EC2 instance, you can connect to it either directly from the 
 
 Replace `/path/to/your/key.pem` with the path to your private key file and `your-instance-public-ip` with the public IP address of your EC2 instance.
 
+3. Once connected, authenticate as the root user by running: `sudo -i`
+
+
 After connecting to the instance, you can proceed with the necessary configurations.
 
 ### Console Image:
-![Console Image](url_to_your_console_image)
+<img width="700" alt="image" src="https://github.com/pablorodn/Diverse-VRP-Models-for-Colombian-E-commerce/assets/113043356/6e992858-aa95-4fed-84db-ee08102df2dc">
+
 
