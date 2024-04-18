@@ -14,5 +14,11 @@ In this repository, we explore and propose various VRP models and solutions tail
 ## Contributions Welcome
 We invite contributions from researchers, developers, and logistics experts to collaborate on developing and refining VRP models and solutions tailored to Bogotá's last-mile delivery challenges. Together, we can work towards enhancing the efficiency, sustainability, and reliability of e-commerce logistics in Bogotá and beyond.
 
+## Step 1: Setting up the OSRM Server
+
+The first step is to set up the OSRM server. To do this, you can follow the step-by-step guide provided in the repository folder [here](https://github.com/pablorodn/Diverse-VRP-Models-for-Colombian-E-commerce/tree/main/docker-osrm-server), which contains detailed instructions for creating the server with Docker enabled. This server will be used to make distance matrix queries via an endpoint that receives coordinates and returns the matrix of times and distances between any points in Colombia.
+
+
+
 ### RUN DOCKER Command
 sudo docker run -t -i -p 5000:5000 -v "${PWD}:/data" ghcr.io/project-osrm/osrm-backend osrm-routed --algorithm mld /data/colombia-latest.osrm
