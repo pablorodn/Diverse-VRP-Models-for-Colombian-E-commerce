@@ -114,4 +114,18 @@ docker run -t -v "${PWD}:/data" ghcr.io/project-osrm/osrm-backend osrm-customize
 ```
 
 
+### Step 6: Running OSRM Docker Container
+
+Now, it's time to run the OSRM Docker container using the following command:
+
+```bash
+sudo docker run -t -i -p 5000:5000 -v "${PWD}:/data" ghcr.io/project-osrm/osrm-backend osrm-routed --algorithm mld /data/colombia-latest.osrm
+```
+### Success! OSRM Server Running
+
+If everything has been set up correctly, you should see the following output after running the OSRM Docker container:
+
 <img width="700" alt="image" src="https://github.com/pablorodn/Diverse-VRP-Models-for-Colombian-E-commerce/assets/113043356/62ad2ab5-fbed-4bc1-8baa-208203f4b61a">
+
+This screen indicates that the OSRM server is successfully running and ready to handle routing requests. You can now integrate the OSRM API into your applications or use it for routing purposes.
+
