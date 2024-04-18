@@ -33,10 +33,42 @@ Replace `/path/to/your/key.pem` with the path to your private key file and `your
 After connecting to the instance, you can proceed with the necessary configurations.
 
 ### Console Image:
-<img width="700" alt="image" src="https://github.com/pablorodn/Diverse-VRP-Models-for-Colombian-E-commerce/assets/113043356/6e992858-aa95-4fed-84db-ee08102df2dc">
+<img width="700" alt="image" src="https://github.com/pablorodn/Diverse-VRP-Models-for-Colombian-E-commerce/assets/113043356/9c8dee52-f5c2-4f14-a147-afcbae6ad1b1">
+
 
 "I will now begin basing my setup on the tutorial mentioned,
 ### Step 3: Install Docker Engine
 
 To install Docker Engine on EC2 for the first time, you should begin by setting up the Docker repository with apt (Advanced Package Tooling), a command-line package management tool used in Debian-based Linux distributions, including Ubuntu. Once this is done, you'll be able to install and keep Docker up-to-date by using the apt-get command."
+During the execution of these commands, you may be prompted with a message asking if you want to continue (Y/n). It's important to always respond with "Y" to ensure the process continues without interruptions.
+
+```bash
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl gnupg
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+```
+
+After executing these commands, you should install the latest version of Docker. Use the following commands in the console:
+
+```bash
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+```
+To verify that everything is functioning correctly, execute the following command in the console:
+
+```bash
+sudo docker run hello-world
+```
+<img width="700" alt="image" src="https://github.com/pablorodn/Diverse-VRP-Models-for-Colombian-E-commerce/assets/113043356/f9552384-90a5-46b6-8531-9cdab5b7e9cb">
 
