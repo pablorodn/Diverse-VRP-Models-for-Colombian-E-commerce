@@ -35,4 +35,8 @@ After connecting to the instance, you can proceed with the necessary configurati
 ### Console Image:
 <img width="700" alt="image" src="https://github.com/pablorodn/Diverse-VRP-Models-for-Colombian-E-commerce/assets/113043356/6e992858-aa95-4fed-84db-ee08102df2dc">
 
+"I will now begin basing my setup on the tutorial mentioned,
+### Step 3: Install Docker Engine
+
+To install Docker Engine on EC2 for the first time, you should begin by setting up the Docker repository with apt (Advanced Package Tooling), a command-line package management tool used in Debian-based Linux distributions, including Ubuntu. Once this is done, you'll be able to install and keep Docker up-to-date by using the apt-get command."
 
