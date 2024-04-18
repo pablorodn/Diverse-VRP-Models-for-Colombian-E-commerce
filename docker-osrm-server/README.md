@@ -76,7 +76,26 @@ If you have successfully installed Docker, you should see the following output:
 
 ### Step 4: Installing osrm-backend and Running the OSRM API
 
-Now, we're ready to move forward with installing osrm-backend and launching the OSRM API. In this step, we'll guide you through the process, ensuring a smooth setup.
+Now, you're ready to move forward with installing osrm-backend and launching the OSRM API. In this step, we'll guide you through the process, ensuring a smooth setup.
+### Step 5: Downloading OSM Data for Colombia
 
+The next step involves downloading the OpenStreetMap (OSM) data for Colombia. You can obtain the data from the OSRM website. 
 
+Please follow these steps:
+
+1. Navigate to the OSRM website by clicking [here](https://download.geofabrik.de/south-america/colombia-latest.osm.pbf).
+   
+2. Copy the link to the Colombia OSM data from the webpage.
+
+Once you have copied the link, proceed to download the data to your EC2 instance.
+
+```bash
+wget http://download.geofabrik.de/south-america/colombia-latest.osm.pbf
+```
+
+After downloading the data, you can proceed with the installation and configuration of osrm-backend.
+
+### Console Image:
+
+<img width="800" alt="image" src="https://github.com/pablorodn/Diverse-VRP-Models-for-Colombian-E-commerce/assets/113043356/29767487-c212-496e-81c5-204908375424">
 
