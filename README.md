@@ -16,7 +16,12 @@ We invite contributions from researchers, developers, and logistics experts to c
 
 ## Step 1: Setting up the OSRM Server
 
-The first step is to set up the OSRM server. To do this, you can follow the step-by-step guide provided in the repository folder [here](https://github.com/pablorodn/Diverse-VRP-Models-for-Colombian-E-commerce/tree/main/docker-osrm-server), which contains detailed instructions for creating the server with Docker enabled. This server will be used to make distance matrix queries via an endpoint that receives coordinates and returns the matrix of times and distances between any points in Colombia.
+The first crucial step is establishing the OSRM server. This server acts as a fundamental tool in our logistics solution, providing us with crucial data to tackle optimization challenges efficiently. You can follow the step-by-step guide provided in the repository folder [here](https://github.com/pablorodn/Diverse-VRP-Models-for-Colombian-E-commerce/tree/main/docker-osrm-server), which contains detailed instructions for creating the server with Docker enabled.
+
+This server's significance lies in its capability to generate estimated time and distance matrices between nodes or points of interest. These matrices serve as foundational data for solving the Traveling Salesman Problem (TSP) and its extension to Vehicle Routing Problems (VRP). By having access to accurate estimations of travel times and distances, we can optimize routes, minimize costs, and enhance overall logistics efficiency significantly.
+
+
+
 
 
 
