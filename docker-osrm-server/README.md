@@ -87,6 +87,8 @@ Please follow these steps:
    
 2. Copy the link to the Colombia OSM data from the webpage.
 
+<img width="800" alt="image" src="https://github.com/pablorodn/Diverse-VRP-Models-for-Colombian-E-commerce/assets/113043356/29767487-c212-496e-81c5-204908375424">
+
 Once you have copied the link, proceed to download the data to your EC2 instance.
 
 ```bash
@@ -95,9 +97,6 @@ wget http://download.geofabrik.de/south-america/colombia-latest.osm.pbf
 
 After downloading the data, you can proceed with the installation and configuration of osrm-backend.
 
-### Console Image:
-
-<img width="800" alt="image" src="https://github.com/pablorodn/Diverse-VRP-Models-for-Colombian-E-commerce/assets/113043356/29767487-c212-496e-81c5-204908375424">
 
 Spin up the osrm-backend image
 ```bash
