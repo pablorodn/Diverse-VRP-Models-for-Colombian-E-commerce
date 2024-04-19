@@ -189,9 +189,6 @@ The "hint" field in each destination and source object is a string used internal
 
 Feel free to modify the input coordinates and explore different scenarios to test the capabilities of the OSRM API.
 
-**Successful Execution of the OSRM Server:**
-   - You confirmed that the OSRM server was running successfully, indicating that it's ready to handle routing requests.
-
 ### Summary and Additional Recommendations
 
 Congratulations on successfully setting up your OSRM server using Docker on an AWS EC2 instance! Here's a summary of the steps you've followed so far:
