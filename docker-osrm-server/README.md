@@ -128,3 +128,101 @@ If everything has been set up correctly, you should see the following output aft
 
 This screen indicates that the OSRM server is successfully running and ready to handle routing requests. You can now integrate the OSRM API into your applications or use it for routing purposes.
 
+
+### Testing the OSRM API
+
+This endpoint is exposed on port 5000 within the Docker container, hence it's accessible via the specified URL. You can make requests to this endpoint using your preferred programming language.
+
+To test the OSRM API and retrieve distance and duration matrices between multiple points, you need to provide the coordinates of the points to evaluate. 
+You need to replace 'your_ec2_ip_address' with the IP address of your AWS EC2 instance. The API endpoint for this purpose is:
+```
+http://(your_ec2_ip_address):5000/table/v1/driving/-74.109090,4.659532;-77.28771824600418,1.2284307220812025?annotations=distance,duration
+```
+
+This endpoint accepts latitude and longitude coordinates for two or more points separated by semicolons (;). Additionally, you can specify the annotations parameter to indicate which matrices you want in the response (distance and duration in this case).
+
+#### Input Parameters:
+- **Coordinates:** Latitude and longitude of each point separated by semicolons. Example: `-74.109090,4.659532;-77.28771,1.228430`
+
+
+#### Example API Response:
+
+In the response JSON, the "distances" array contains the distance matrix, the "durations" array contains the duration matrix, and the "destinations" and "sources" arrays provide information about each point including its hint, distance, name, and location coordinates.
+
+```
+{
+  "code": "Ok",
+  "distances": [[0, 766225.4], [764959.4, 0]],
+  "destinations": [
+    {
+      "hint": "pBkugAAaLoAUAAAADQAAAG4AAAAzAAAAfwViQc5xD0EeXphCxBwOQhQAAAANAAAAbgAAADMAAAAQAgAAeS-V-10ZRwBeL5X7TBlHAAEAPwlSPa5d",
+      "distance": 3.536687349,
+      "name": "Calle 25B",
+      "location": [-74.109063, 4.659549]
+    },
+    {
+      "hint": "uNwOgNrcDoCYAAAAggAAAAAAAAAAAAAAFTTMQpZVrEIAAAAAAAAAAJgAAACCAAAAAAAAAAAAAAAQAgAAzq5k-4S-EgDarmT7j74SAAAAzxNSPa5d",
+      "distance": 1.806400499,
+      "name": "Calle 18 A",
+      "location": [-77.28773, 1.22842]
+    }
+  ],
+  "durations": [[0, 40960.5], [40307.5, 0]],
+  "sources": [
+    {
+      "hint": "pBkugAAaLoAUAAAADQAAAG4AAAAzAAAAfwViQc5xD0EeXphCxBwOQhQAAAANAAAAbgAAADMAAAAQAgAAeS-V-10ZRwBeL5X7TBlHAAEAPwlSPa5d",
+      "distance": 3.536687349,
+      "name": "Calle 25B",
+      "location": [-74.109063, 4.659549]
+    },
+    {
+      "hint": "uNwOgNrcDoCYAAAAggAAAAAAAAAAAAAAFTTMQpZVrEIAAAAAAAAAAJgAAACCAAAAAAAAAAAAAAAQAgAAzq5k-4S-EgDarmT7j74SAAAAzxNSPa5d",
+      "distance": 1.806400499,
+      "name": "Calle 18 A",
+      "location": [-77.28773, 1.22842]
+    }
+  ]
+}
+```
+
+The "hint" field in each destination and source object is a string used internally by OSRM to refer to specific locations. It helps in identifying the corresponding points in subsequent requests or when interpreting the response.
+
+Feel free to modify the input coordinates and explore different scenarios to test the capabilities of the OSRM API.
+
+**Successful Execution of the OSRM Server:**
+   - You confirmed that the OSRM server was running successfully, indicating that it's ready to handle routing requests.
+
+### Summary and Additional Recommendations
+
+Congratulations on successfully setting up your OSRM server using Docker on an AWS EC2 instance! Here's a summary of the steps you've followed so far:
+
+1. **Creating the EC2 Server on AWS:**
+   - You configured an EC2 server in the Amazon Web Services console, choosing an Ubuntu instance with at least 4GB of RAM to ensure optimal performance.
+
+2. **Connecting to the EC2 Instance:**
+   - You connected to the EC2 instance both from the AWS console and via SSH, ensuring access to the command line for configurations.
+
+3. **Installing Docker Engine:**
+   - You installed Docker Engine on your EC2 instance, setting up the Docker repository and then installing the latest version of Docker. You verified the installation by running a test container.
+
+4. **Installing and Running osrm-backend:**
+   - You downloaded OpenStreetMap data for Colombia and then installed and ran the osrm-backend container to process the data and launch the OSRM routing service.
+
+
+### Additional Recommendations:
+
+- **Security:**
+  Ensure to apply proper security practices, such as configuring firewall rules and restricting SSH access only to trusted IP addresses.
+
+- **Monitoring and Maintenance:**
+  Implement monitoring tools to monitor the performance and availability of the OSRM server, and establish regular backup procedures for critical data.
+
+- **Scalability:**
+  Consider implementing an auto-scaling solution for your EC2 instance, especially if you anticipate an increase in traffic load in the future.
+
+- **Performance Optimization:**
+  Experiment with different OSRM configurations and parameters to optimize the server's performance, especially in terms of routing speed and resource consumption.
+
+By following these steps and additional recommendations, you'll be well on your way to effectively maintaining and utilizing your OSRM server on AWS. Good luck with your project!
+
+
